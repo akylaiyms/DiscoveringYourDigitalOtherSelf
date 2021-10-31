@@ -26,11 +26,15 @@ After completing all of the steps above you should be able to enter play mode an
 
 ## Scripts, Shaders, Materials
 
-`CameraSwitch` script 
-`GenerateAudio` script
-`InverNormals` script
-
-`Waves` shader
-`Noise` shader
-`PerlinNoise` shader
-`Fractal` shader
+`CameraSwitch` script is for switching the views between the spheres. Up key - sphere 3, down key - sphere 4, right key - sphere 1, left key - sphere 2, space key - sphere 5 <br>
+`GenerateAudio` script is for generating random combinations of audioclips from audio library attached to Spheres. <br>
+`InverNormals` script is for inverting the material on the spheres. Instead of projecting the material outwards it projects is inwards, creating a 360 degree view. <br>
+`Waves` is a shader that generates pattern useing cosine and sine stripes. <br>
+`Noise` is a shader that generates pattern with cosine and sine stripes with noise distortion.
+`PerlinNoise` is a shader generating pattern using perlin noise and color mapping. 
+`Fractal` is a shader generating fractal patterns using varying sets between Mandelbrot and Julia sets. 
+`Waves` is a material from the matching shader.
+`Noise` is a material from the matching shader.
+`PerlinNoise` is a material from the matching shader.
+`Mandelbrot` is a material from `Fractal` shader, mandelbrot variation.
+`Julia` is a material `Fractal` shader, Julia variation.
