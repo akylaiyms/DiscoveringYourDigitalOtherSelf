@@ -12,3 +12,25 @@ All of the sounds here are processed field recordings from my everyday life. You
 The visual patterns are the representations of how a single ‘drop’ of new data falling into the ocean of information triggers the algorithm to find infinite possibilities of different connections and meanings. 
 
 <em>You get into your phone’s head and hear yourself from its point of view.</em> The message I am trying to carry through this piece is to make the audience simply aware of the amount of information we are unconsciously feeding into the algorithms through sound. I am not trying to argue that the issue of data collection is neither good nor bad, but simply keeping a neutral ground and exploring the process of data collection. 
+
+## Setting up the environment to run the project
+
+Needed software Installations: 
+1. Unity Hub <https://unity3d.com/get-unity/download>
+2. Unity Version 2019.4.16f1 <https://unity3d.com/get-unity/download/archive>
+
+After opening up the project through Unity Hub, install GoogleVR package. 
+Follow the instructions here: <https://developers.google.com/cardboard/develop/unity/quickstart>
+
+After completing all of the steps above you should be able to enter play mode and view the project. 
+
+## Scripts, Shaders, Materials
+
+`CameraSwitch` script 
+`GenerateAudio` script
+`InverNormals` script
+
+`Waves` shader
+`Noise` shader
+`PerlinNoise` shader
+`Fractal` shader
