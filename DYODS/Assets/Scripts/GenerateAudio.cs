@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
  public class GenerateAudio : MonoBehaviour
 {
     public List<AudioClip> audioClips;
@@ -10,13 +11,17 @@ using UnityEngine;
     public AudioClip secondClip; 
     public AudioClip thirdClip;
     public AudioClip forthClip;
-    public AudioSource firstSource;
-    public AudioSource secondSource;
-    public AudioSource thirdSource;
-    public AudioSource forthSource;
+    public AudioClip fifthClip; 
+    private AudioSource firstSource;
+    private AudioSource secondSource;
+    private AudioSource thirdSource;
+    private AudioSource forthSource;
+    private AudioSource fifthSource;
     public float minTransitionTime = 0f;
     public float maxTransitionTime = 2f;
     public float transitionTime = -1f;
+    private List<AudioSource> combo_1 = new List<AudioSource>();
+    private List<AudioSource> combo_2 = new List<AudioSource>();
  
     void Start()
     {
@@ -24,7 +29,7 @@ using UnityEngine;
         secondSource = GetComponent<AudioSource>();
         thirdSource = GetComponent<AudioSource>();
         forthSource = GetComponent<AudioSource>();
-
+        fifthSource = GetComponent<AudioSource>();
     }
  
     void Update()
@@ -33,20 +38,51 @@ using UnityEngine;
         {
             if (transitionTime < 0f)
             {
+                
                 firstClip = audioClips[Random.Range(0, audioClips.Count)];
                 secondClip = audioClips[Random.Range(0, audioClips.Count)];
                 thirdClip = audioClips[Random.Range(0, audioClips.Count)];
                 forthClip = audioClips[Random.Range(0, audioClips.Count)];
+                fifthClip = audioClips[Random.Range(0, audioClips.Count)];
+
+                if (firstClip == secondClip)
+                {
+                    secondClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (firstClip == thirdClip)
+                {
+                    thirdClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (firstClip == forthClip)
+                {
+                    forthClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (firstClip == fifthClip)
+                {
+                    fifthClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (secondClip == thirdClip)
+                {
+                    thirdClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (thirdClip == forthClip)
+                {
+                    forthClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
+                if (forthClip == fifthClip)
+                {
+                    fifthClip = audioClips[Random.Range(0, audioClips.Count)];
+                }
 
                 firstSource.clip = firstClip;
                 secondSource.clip = secondClip;
                 thirdSource.clip = thirdClip;
                 forthSource.clip = forthClip;
 
-                firstSource.PlayOneShot(firstClip, 0.7f);
-                secondSource.PlayOneShot(secondClip, 0.7f);
-                thirdSource.PlayOneShot(thirdClip, 0.7f);
-                forthSource.PlayOneShot(forthClip, 0.7f);
+                firstSource.PlayOneShot(firstClip, 1.0f);
+                secondSource.PlayOneShot(secondClip, 1.0f);
+                thirdSource.PlayOneShot(thirdClip, 1.0f);
+                forthSource.PlayOneShot(forthClip, 1.0f);
 
                 transitionTime = Random.Range(minTransitionTime, maxTransitionTime);
             }
@@ -57,57 +93,3 @@ using UnityEngine;
         }
     }
 }
-
-// class Node 
-//      {
-//         static void createNode()
-//                  {
-//                      
-//                  }
-
-//         static void hasChildren()
-//                  {
-//                      
-//                  }
-//         
-//
-//
-//      }
-
-// void Start()
-//     {
-//         source1 = GetComponent<AudioSource>();
-//         source2 = GetComponent<AudioSource>();
-//         source3 = GetComponent<AudioSource>();
-//         source4 = GetComponent<AudioSource>();
-//         source5 = GetComponent<AudioSource>();
-
-//         node1 = CreateNode(source1);
-//         node2 = CreateNode(source2);
-//         node3 = CreateNode(source3);
-//         node4 = CreateNode(source4);
-//         node5 = CreateNode(source5);
-
-//         currentNodes = [];
-//         currentNodes.Add(node2, node3, node4, node5);
-//         currentGraph = CreateGraph(node1, currentNodes);
-//         currentNode = currentGraph.root();
-//         currentNode.Play();
-//     }
- 
-//     void Update()
-//     {
-//         if (currentNode.isPlaying)
-//         {
-//             if (currentNode.hasChildren)
-//             {
-//                 currentNode.PlayOneShot(currentNode, 0.7f);
-//                 currentNodeChildren.PlayOneShot();
-//             }
-//             else
-//             {
-//                 currentNode = currentNodeChildren.Random();
-//             }
-//         }
-//     }
-// }
