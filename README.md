@@ -11,7 +11,11 @@ All of the sounds here are processed field recordings from my everyday life. You
 
 The visual patterns are the representations of how a single ‘drop’ of new data falling into the ocean of information triggers the algorithm to find infinite possibilities of different connections and meanings. 
 
-<em>You get into your phone’s head and hear yourself from its point of view.</em> The message I am trying to carry through this piece is to make the audience simply aware of the amount of information we are unconsciously feeding into the algorithms through sound. I am not trying to argue that the issue of data collection is neither good nor bad, but simply keeping a neutral ground and exploring the process of data collection. 
+<em>You get into your phone’s head and hear yourself from its point of view.</em> The message I am trying to carry through this piece is to make the audience simply aware of the amount of information we are unconsciously feeding into the algorithms through sound. 
+
+
+Discovering Your Other Self debuted as an installation piece in Bennington College, VT in November 2021. The digital VR version of the piece will be available in late 2022.
+
 
 ## Setting up the environment to run the project
 
